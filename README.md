@@ -1,59 +1,69 @@
-# JuanGzSz
+# Juan González Landing Page
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+Aplicación web desarrollada con **Angular 21** y **Tailwind CSS** para la presentación profesional del proyecto musical de **Juan González**.
+El sitio está concebido como una landing page promocional con una identidad visual inspirada en el universo **jazz / blues**, orientada a comunicar la propuesta artística y facilitar el contacto para actuaciones, sesiones y colaboraciones.
 
-## Development server
+## Stack tecnológico
 
-To start a local development server, run:
+- Angular 21
+- Tailwind CSS 4git
+- TypeScript
+- Angular SSR
 
-```bash
-ng serve
-```
+## Instalación y ejecución
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Instala las dependencias del proyecto con:
 
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Inicia el entorno de desarrollo con:
 
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
+Por defecto, la aplicación queda disponible en:
 
-To build the project run:
-
-```bash
-ng build
+```text
+http://localhost:4200/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Si el servidor no arranca correctamente, se recomienda verificar que las dependencias se hayan instalado de forma completa y que el entorno local disponga de Node.js y npm configurados correctamente.
 
-## Running unit tests
+## Scripts disponibles
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+| Comando         | Descripción                                |
+| --------------- | ------------------------------------------ |
+| `npm start`     | Inicia el servidor de desarrollo           |
+| `npm run build` | Genera la build de producción              |
+| `npm run watch` | Ejecuta la compilación en modo observación |
+| `npm test`      | Lanza la suite de pruebas                  |
 
-```bash
-ng test
+## Estructura del proyecto
+
+```text
+src/
+  app/
+    components/
+      navbar/
+      hero/
+      about/
+      footer/
 ```
 
-## Running end-to-end tests
+La interfaz está organizada en componentes reutilizables que separan las distintas secciones de la landing, facilitando el mantenimiento, la evolución visual del sitio y la reutilización de bloques de contenido.
 
-For end-to-end (e2e) testing, run:
+## Finalidad
 
-```bash
-ng e2e
-```
+El objetivo principal de esta aplicación es proporcionar una presencia web clara, visualmente cuidada y alineada con la identidad del artista, permitiendo:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- presentar su propuesta musical,
+- transmitir una dirección estética coherente con el jazz y el blues,
+- habilitar un canal de contacto directo para contratación y colaboración.
 
-## Additional Resources
+## Autoría
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Diseño y desarrollo: **Aleixo Fdez Cuevas**.
+
