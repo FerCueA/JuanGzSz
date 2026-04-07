@@ -1,6 +1,17 @@
-<div class="min-h-screen bg-slate-950 text-slate-100">
-  <app-navbar />
-  <app-hero />
-  <app-about />
-  <app-footer />
+<div class="relative min-h-screen overflow-x-hidden bg-[#f7f0e2] text-slate-800">
+  <div class="pointer-events-none absolute inset-0 overflow-hidden">
+    <div class="absolute inset-x-0 top-0 h-96 bg-linear-to-b from-[#efe6d5]/70 to-transparent"></div>
+    <div class="absolute -left-12 top-12 h-80 w-56 rotate-12 bg-[#38484f]/12"></div>
+    <div class="absolute right-0 top-0 h-[32rem] w-40 bg-[#df5a24]/10"></div>
+    <div class="absolute left-1/2 top-20 h-176 w-px -translate-x-1/2 bg-linear-to-b from-transparent via-[#baa88f]/16 to-transparent"></div>
+    <div class="absolute left-4 top-120 h-32 w-80 -rotate-12 bg-[#e49b4a]/10"></div>
+    <div class="absolute bottom-10 right-6 h-64 w-64 rounded-full bg-[#d94d1c]/8 blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 pt-24">
+    <app-navbar />
+    <app-hero />
+    <app-about />
+    <app-footer />
+  </div>
 </div>

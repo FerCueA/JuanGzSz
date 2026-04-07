@@ -1,50 +1,104 @@
-<main id="inicio" class="mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-2 md:items-center">
-  <section class="space-y-6">
-    <span class="inline-flex rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-300">
-      Música en directo y estudio
-    </span>
+<main id="inicio" class="relative mx-auto max-w-6xl px-6 pb-20 pt-6">
+  <div class="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+    <section class="space-y-8 pt-4">
+      <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-[#8a6a4b]">
+        <span>Tenerife</span>
+        <span>Late set</span>
+        <span>Jazz / blues</span>
+      </div>
 
-    <div class="space-y-4">
-      <h2 class="text-4xl font-extrabold tracking-tight md:text-5xl">
-        Hola, soy <span class="text-cyan-400">Juan Gonzalez</span>, guitarrista
-      </h2>
-      <p class="max-w-xl text-base leading-7 text-slate-300 md:text-lg">
-        Comparto mi música, mis proyectos y mi experiencia sobre el escenario y en estudio.
-      </p>
-    </div>
+      <div class="space-y-5">
+        <p class="text-xs uppercase tracking-[0.42em] text-[#8a6a4b]">Juan González · guitarra eléctrica y acústica</p>
+        <h2 class="max-w-3xl text-5xl font-semibold leading-[0.86] text-[#2b3742] md:text-6xl lg:text-7xl">
+          Directo con alma de club,
+          <span class="block text-[#df5a24]">blues y jazz</span>
+          <span class="block text-[#46565f]">en clave de cartel.</span>
+        </h2>
+        <p class="max-w-xl text-base leading-8 text-[#556474] md:text-lg">
+          Un formato elegante y cálido para salas, eventos y sesiones en Tenerife: guitarra con presencia, repertorio con gusto y una estética que recuerda a los viejos pósteres de jazz.
+        </p>
+      </div>
 
-    <div class="flex flex-wrap gap-3">
-      <a
-        href="#contacto"
-        class="rounded-lg bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
-      >
-        Escúchame
-      </a>
-      <a
-        href="#sobre-mi"
-        class="rounded-lg border border-slate-700 px-5 py-3 text-sm font-semibold transition hover:border-cyan-400 hover:text-cyan-300"
-      >
-        Conoce mi trabajo
-      </a>
-    </div>
-  </section>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="#contacto"
+          class="rounded-full bg-[#df5a24] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(217,77,28,0.18)] transition hover:bg-[#c94f1e]"
+        >
+          Reservar actuación
+        </a>
+        <a
+          href="#sobre-mi"
+          class="rounded-full bg-white/75 px-5 py-3 text-sm font-semibold text-[#46565f] shadow-sm transition hover:bg-white"
+        >
+          Ver repertorio
+        </a>
+      </div>
 
-  <section class="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-2xl shadow-cyan-950/20">
-    <div class="grid gap-4 sm:grid-cols-3">
-      <article class="rounded-xl bg-slate-800 p-4">
-        <p class="text-sm text-slate-400">Especialidad</p>
-        <h3 class="mt-2 text-lg font-semibold">Guitarra moderna</h3>
-      </article>
+      <div class="grid gap-4 pt-2 text-sm text-[#556474] sm:grid-cols-3">
+        <div>
+          <span class="mb-2 block h-1 w-12 bg-[#df5a24]"></span>
+          <p class="font-semibold text-[#2b3742]">Directo</p>
+          <p>Set elegante y cercano</p>
+        </div>
+        <div>
+          <span class="mb-2 block h-1 w-12 bg-[#38484f]"></span>
+          <p class="font-semibold text-[#2b3742]">Sesión</p>
+          <p>Arreglos con espacio y tono</p>
+        </div>
+        <div>
+          <span class="mb-2 block h-1 w-12 bg-[#e49b4a]"></span>
+          <p class="font-semibold text-[#2b3742]">Booking</p>
+          <p>WhatsApp directo</p>
+        </div>
+      </div>
+    </section>
 
-      <article class="rounded-xl bg-slate-800 p-4">
-        <p class="text-sm text-slate-400">Estilo</p>
-        <h3 class="mt-2 text-lg font-semibold">Rock, blues y acústico</h3>
-      </article>
+    <section class="relative mx-auto w-full max-w-xl">
+      <div class="relative mx-auto h-160 max-w-md bg-[#f5ead7] shadow-[0_24px_50px_rgba(83,66,47,0.18)]">
+        <div class="absolute left-6 top-[-10px] h-5 w-5 rounded-sm bg-[#3b474d] shadow"></div>
+        <div class="absolute right-6 top-[-10px] h-5 w-5 rounded-sm bg-[#3b474d] shadow"></div>
 
-      <article class="rounded-xl bg-slate-800 p-4">
-        <p class="text-sm text-slate-400">Disponible</p>
-        <h3 class="mt-2 text-lg font-semibold">Conciertos y colaboraciones</h3>
-      </article>
-    </div>
-  </section>
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="absolute left-0 top-0 h-full w-24 bg-[#38484f]"></div>
+          <div class="absolute right-0 top-0 h-full w-24 bg-[#df5a24]"></div>
+          <div class="absolute left-20 top-16 h-56 w-56 rounded-full bg-[#df5a24]"></div>
+          <div class="absolute right-8 top-0 h-56 w-56 rounded-full border-[22px] border-[#e49b4a]"></div>
+          <div class="absolute left-28 top-0 h-full w-8 rotate-12 bg-[#f8f1e3]/90"></div>
+          <div class="absolute -left-10 bottom-16 h-64 w-64 rotate-12 bg-[#e49b4a]/80"></div>
+          <div class="absolute bottom-0 left-28 h-28 w-20 bg-[#df5a24]"></div>
+        </div>
+
+        <div class="absolute left-6 top-4 z-20 text-6xl font-semibold uppercase tracking-[0.05em] text-[#df5a24] md:text-7xl">JAZZ</div>
+
+        @if (photoAvailable()) {
+          <img
+            ngSrc="/juan-gonzalez-guitar.jpg"
+            alt="Juan González posando con su guitarra eléctrica"
+            width="760"
+            height="900"
+            priority
+            class="absolute bottom-0 left-10 right-10 z-10 h-[74%] w-auto max-w-none object-cover grayscale contrast-125 sepia-[0.25] mix-blend-multiply"
+            (error)="usePosterFallback()"
+          />
+        } @else {
+          <div class="absolute inset-x-14 bottom-0 top-28 z-10">
+            <div class="absolute bottom-0 left-2 h-[70%] w-24 bg-black"></div>
+            <div class="absolute bottom-0 left-10 h-[78%] w-14 -skew-x-12 bg-[#39484f]"></div>
+            <div class="absolute left-6 top-10 h-20 w-20 rounded-full bg-[#39484f]"></div>
+            <div class="absolute left-12 top-18 h-4 w-20 -rotate-12 bg-black"></div>
+
+            <div class="absolute bottom-0 right-2 h-[74%] w-24 bg-[#39484f]"></div>
+            <div class="absolute bottom-0 right-12 h-[72%] w-12 -skew-x-12 bg-black"></div>
+            <div class="absolute right-8 top-12 h-20 w-20 rounded-full bg-[#39484f]"></div>
+            <div class="absolute right-12 top-18 h-28 w-10 rounded-full bg-[#f7f0e2]"></div>
+          </div>
+        }
+
+        <div class="absolute bottom-5 left-6 right-6 z-20 text-[#2b3742]">
+          <p class="text-[10px] uppercase tracking-[0.35em] text-[#38484f]">Juan González · Tenerife</p>
+          <p class="mt-1 text-sm uppercase tracking-[0.25em] text-[#df5a24]">jazz blues / live sessions</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </main>
