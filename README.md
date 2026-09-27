@@ -38,7 +38,6 @@ Landing page construida con **Angular 21** y **Tailwind CSS 4**, pensada para pr
 [![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)](https://angular.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com)
 
 **🧰 Calidad y tooling**
 [![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)](https://vitest.dev)
@@ -66,18 +65,17 @@ npm run build     # generar la build de producción (con SSR)
 
 ## 🧾 Scripts
 
-| Script                       | Descripción                                     |
-| ---------------------------- | ----------------------------------------------- |
-| `npm start`                  | Inicia el entorno de desarrollo                 |
-| `npm run build`              | Genera la build de producción (SSR + prerender) |
-| `npm run watch`              | Compila en modo observación                     |
-| `npm test`                   | Ejecuta los tests con Vitest                    |
-| `npm run lint`               | Analiza el código con ESLint                    |
-| `npm run typecheck`          | Comprueba los tipos de la aplicación            |
-| `npm run typecheck:spec`     | Comprueba los tipos de los tests                |
-| `npm run format`             | Formatea el código con Prettier                 |
-| `npm run format:check`       | Comprueba el formato sin modificar archivos     |
-| `npm run serve:ssr:JuanGzSz` | Sirve la build SSR generada                     |
+| Script                   | Descripción                                     |
+| ------------------------ | ----------------------------------------------- |
+| `npm start`              | Inicia el entorno de desarrollo                 |
+| `npm run build`          | Genera la build de producción (SSR + prerender) |
+| `npm run watch`          | Compila en modo observación                     |
+| `npm test`               | Ejecuta los tests con Vitest                    |
+| `npm run lint`           | Analiza el código con ESLint                    |
+| `npm run typecheck`      | Comprueba los tipos de la aplicación            |
+| `npm run typecheck:spec` | Comprueba los tipos de los tests                |
+| `npm run format`         | Formatea el código con Prettier                 |
+| `npm run format:check`   | Comprueba el formato sin modificar archivos     |
 
 > ℹ️ Antes de dar por terminado un cambio: `lint`, `typecheck`, `test` y `build`.
 

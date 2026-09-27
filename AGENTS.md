@@ -11,7 +11,8 @@ en `App` a partir de secciones.
 - **Framework:** Angular 21 (standalone components, zoneless, `ChangeDetectionStrategy.OnPush`).
 - **Estilos:** Tailwind CSS v4 vía `@tailwindcss/postcss` (no hay `tailwind.config`; los
   tokens se definen en `src/styles.css` con `@theme`).
-- **SSR:** Angular SSR + Express, prerender de la ruta estática (`app.routes.server.ts`).
+- **SSR:** Angular SSR con App Engine, prerender de la ruta estática (`app.routes.server.ts`)
+  y despliegue mediante `@netlify/angular-runtime` (`src/server.ts`).
 - **Tests:** Vitest (`ng test` / `npm test`).
 - **Despliegue:** Netlify (`netlify.toml`).
 - **Idioma del contenido:** español (`<html lang="es">`).
@@ -82,7 +83,6 @@ utilidad de Tailwind.
 | `npm test`                                | Tests con Vitest                                                             |
 | `npm run lint`                            | Análisis con ESLint (`ng lint`)                                              |
 | `npm run format` / `npm run format:check` | Formateo con Prettier                                                        |
-| `npm run serve:ssr:JuanGzSz`              | Sirve la build SSR                                                           |
 
 ## Verification
 
