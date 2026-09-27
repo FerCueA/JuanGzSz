@@ -1,167 +1,149 @@
-# Juan González Landing Page
+# 🎸 Landing de Juan González
 
-Landing page profesional desarrollada con **Angular 21**, **TypeScript** y **Tailwind CSS 4** para presentar la propuesta artística de **Juan González**.
-El proyecto está orientado a comunicar identidad, estilo y vías de contacto dentro de una experiencia visual inspirada en el universo **jazz / blues**.
+**Web de jazz y blues en directo en Tenerife.**
 
-## 1. Índice
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com)
 
-- [Juan González Landing Page](#juan-gonzález-landing-page)
-  - [1. Índice](#1-índice)
-  - [2. Descripción general](#2-descripción-general)
-  - [3. Objetivos del proyecto](#3-objetivos-del-proyecto)
-  - [4. Stack tecnológico](#4-stack-tecnológico)
-  - [5. Arquitectura del proyecto](#5-arquitectura-del-proyecto)
-    - [5.1. Estructura principal](#51-estructura-principal)
-    - [5.2. Organización por apartados](#52-organización-por-apartados)
-    - [5.3. Enfoque arquitectónico](#53-enfoque-arquitectónico)
-  - [6. Puesta en marcha local](#6-puesta-en-marcha-local)
-    - [6.1. Requisitos previos](#61-requisitos-previos)
-    - [6.2. Instalación](#62-instalación)
-    - [6.3. Entorno de desarrollo](#63-entorno-de-desarrollo)
-  - [7. Scripts disponibles](#7-scripts-disponibles)
-  - [8. Despliegue](#8-despliegue)
-    - [8.1. Flujo de publicación](#81-flujo-de-publicación)
-  - [9. Buenas prácticas aplicadas](#9-buenas-prácticas-aplicadas)
-  - [10. Autoría](#10-autoría)
+Landing page construida con **Angular 21** y **Tailwind CSS 4**, pensada para presentar la propuesta artística de Juan González y convertir visitas en reservas por WhatsApp. Estética de cartel de jazz: papel cálido, tipografía editorial y un póster como pieza central.
+
+🌍 **Autoría:** [aleixofdezcuevas.es](https://aleixofdezcuevas.es/)
 
 ---
 
-## 2. Descripción general
+## ✨ Qué incluye
 
-Esta aplicación se concibe como una **single-page application** de presentación profesional, diseñada para:
-
-- reforzar la identidad y la presencia digital del artista,
-- comunicar su propuesta musical de forma clara, atractiva y estructurada,
-- facilitar el contacto para actuaciones, colaboraciones y nuevas oportunidades profesionales.
-
----
-
-## 3. Objetivos del proyecto
-
-1. **Transmitir identidad visual** con una estética cálida, elegante y coherente.
-2. **Estructurar el contenido por secciones** para mejorar la navegación y la lectura.
-3. **Mantener una arquitectura simple y escalable** basada en componentes reutilizables.
-4. **Preparar el despliegue web** con renderizado del lado del servidor y publicación en Netlify.
-
----
-
-## 4. Stack tecnológico
-
-| Tecnología | Uso principal |
-| --- | --- |
-| `Angular 21` | Framework principal de la aplicación |
-| `TypeScript` | Tipado y mantenimiento del código |
-| `Tailwind CSS 4` | Estilado y maquetación visual |
-| `Angular SSR` | Renderizado del lado del servidor |
-| `Express` | Soporte para la capa server en SSR |
-| `Netlify` | Despliegue y publicación |
+- 🎷 **Identidad jazz / blues**: papel cálido, tinta y naranja; tipografías Cormorant Garamond y Source Sans 3.
+- 🏠 **Apertura tipo cartel** con CTA de reserva, datos de confianza y póster ilustrado.
+- 🖋️ **Repertorio** en formato _set list_, dividido en capítulos.
+- 🗓️ **Agenda de directos** con estado vacío listo para publicar fechas.
+- 🎧 **Música y galería** como secciones data-driven (se activan al rellenar sus datos).
+- 📝 **Formulario de reserva** con validación que compone el mensaje de WhatsApp.
+- ❓ **FAQ** en acordeón (`<details>`, sin JS).
+- 📲 **CTA final de booking** con contacto directo por WhatsApp.
+- 🧭 **Navegación** por anclas con **scrollspy** y **menú móvil** accesible.
+- 🪄 **Animaciones** de aparición al hacer scroll, respetando `prefers-reduced-motion`.
+- ♿ **Responsive** mobile-first y accesible (foco visible, jerarquía de encabezados, contraste AA).
+- 🧩 **Contenido centralizado** en `src/app/core`, con layout, secciones y UI separados.
+- 🎨 **Design system** con tokens en `src/styles.css` documentado en `DESIGN.md`.
+- ⚡ **SSR** con prerender de la página.
 
 ---
 
-## 5. Arquitectura del proyecto
+## 🛠️ Tecnologías
 
-La aplicación sigue una arquitectura **modular y orientada a componentes**, adecuada para una landing page mantenible.
+**🎨 Frontend**
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)](https://angular.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com)
 
-### 5.1. Estructura principal
+**🧰 Calidad y tooling**
+[![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)](https://vitest.dev)
+[![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=black)](https://prettier.io)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://www.netlify.com)
 
-```text
+---
+
+## 🚀 Puesta en marcha
+
+### Requisitos
+
+- 🟢 `Node.js >= 22.12.0`
+- 📦 `npm`
+
+### Comandos
+
+```bash
+npm install       # instalar dependencias
+npm start         # entorno de desarrollo → http://localhost:4200
+npm run build     # generar la build de producción (con SSR)
+```
+
+---
+
+## 🧾 Scripts
+
+| Script                       | Descripción                                     |
+| ---------------------------- | ----------------------------------------------- |
+| `npm start`                  | Inicia el entorno de desarrollo                 |
+| `npm run build`              | Genera la build de producción (SSR + prerender) |
+| `npm run watch`              | Compila en modo observación                     |
+| `npm test`                   | Ejecuta los tests con Vitest                    |
+| `npm run lint`               | Analiza el código con ESLint                    |
+| `npm run typecheck`          | Comprueba los tipos de la aplicación            |
+| `npm run typecheck:spec`     | Comprueba los tipos de los tests                |
+| `npm run format`             | Formatea el código con Prettier                 |
+| `npm run format:check`       | Comprueba el formato sin modificar archivos     |
+| `npm run serve:ssr:JuanGzSz` | Sirve la build SSR generada                     |
+
+> ℹ️ Antes de dar por terminado un cambio: `lint`, `typecheck`, `test` y `build`.
+
+---
+
+## 📁 Estructura
+
+```
 src/
-├── app/
-│   ├── app.ts
-│   ├── app.html
-│   ├── app.config.ts
-│   ├── app.routes.ts
-│   └── components/
-│       ├── navbar/
-│       ├── hero/
-│       ├── about/
-│       └── footer/
-├── styles.css
-├── main.ts
-├── main.server.ts
-└── server.ts
+  app/
+    core/               # Datos y constantes del sitio
+      site.ts           # Identidad, navegación, contacto, FAQ y datos de secciones
+    layout/             # Chrome de la página
+      navbar/           # Navegación con scrollspy y menú móvil
+      footer/
+    sections/           # Secciones de contenido
+      hero/
+      about/
+      shows/            # Agenda (data-driven)
+      music/            # Música (data-driven)
+      gallery/          # Galería (data-driven)
+      booking/          # Formulario de reserva + WhatsApp
+      faq/              # Preguntas frecuentes
+    shared/
+      directives/       # reveal (animación al hacer scroll)
+      ui/               # Base reutilizable
+        button/         # Directiva appButton
+        section/        # Contenedor de sección
+        poster-card/    # Póster decorativo
+    app.ts              # Composición de la landing
+    app.config.ts       # Providers de la aplicación
+    app.routes*.ts      # Rutas (vacías) y estrategia de render
+  styles.css            # Tokens del design system (@theme)
+  index.html
+  main.ts
+  main.server.ts
+  server.ts
 ```
 
-### 5.2. Organización por apartados
-
-| Apartado | Responsabilidad |
-| --- | --- |
-| `Navbar` | Navegación principal y acceso rápido a secciones/contacto |
-| `Hero` | Presentación inicial e impacto visual de la marca artística |
-| `About` | Información descriptiva del proyecto musical o del artista |
-| `Footer` | Cierre de página, enlaces y datos de contacto |
-| `App` | Composición general de toda la landing |
-
-### 5.3. Enfoque arquitectónico
-
-- **Composición central desde `App`**: la página principal ensambla todos los bloques visuales.
-- **Separación por componentes**: cada sección tiene su propio HTML, CSS y lógica.
-- **Escalabilidad sencilla**: permite añadir nuevas secciones sin romper la estructura actual.
-- **SSR preparado**: la aplicación está configurada para renderizado híbrido y despliegue optimizado.
+> 💡 Para cambiar textos o datos de contacto y navegación suele bastar con editar `src/app/core/site.ts` y las plantillas de `sections/`. Los valores visuales viven en `src/styles.css`.
 
 ---
 
-## 6. Puesta en marcha local
+## 🚀 Despliegue
 
-### 6.1. Requisitos previos
+Proyecto preparado para desplegarse en **Netlify** mediante la configuración incluida en `netlify.toml`, con el runtime de Angular para soportar SSR.
 
-- `Node.js`
-- `npm`
-
-### 6.2. Instalación
-
-```bash
-npm install
-```
-
-### 6.3. Entorno de desarrollo
-
-```bash
-npm start
-```
-
-La aplicación quedará disponible en:
-
-```text
-http://localhost:4200/
-```
+- **Comando de build:** `npm run build`
+- **Carpeta de publicación:** `dist/JuanGzSz/browser`
 
 ---
 
-## 7. Scripts disponibles
+## 📫 Contacto
 
-| Comando | Descripción |
-| --- | --- |
-| `npm start` | Inicia el servidor de desarrollo |
-| `npm run build` | Genera la build de producción |
-| `npm run watch` | Compila en modo observación |
-| `npm test` | Ejecuta las pruebas del proyecto |
-| `npm run serve:ssr:JuanGzSz` | Sirve la versión SSR generada |
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/34619869942)
+[![Web](https://img.shields.io/badge/Web-aleixofdezcuevas.es-2b3742?style=for-the-badge)](https://aleixofdezcuevas.es/)
 
 ---
 
-## 8. Despliegue
+## 📚 Documentación adicional
 
-El proyecto está preparado para desplegarse en **Netlify** mediante la configuración definida en `netlify.toml`.
-
-### 8.1. Flujo de publicación
-
-1. Construir la aplicación con `npm run build`.
-2. Publicar la salida generada en `dist/JuanGzSz/browser`.
-3. Utilizar el runtime de Angular configurado para asegurar la compatibilidad con SSR.
+- [`DESIGN.md`](./DESIGN.md) — sistema de diseño (referencia obligatoria para UI).
+- [`AGENTS.md`](./AGENTS.md) — reglas para agentes de IA.
 
 ---
 
-## 9. Buenas prácticas aplicadas
+## Autoría
 
-- Estructura clara basada en responsabilidades.
-- Componentes reutilizables y desacoplados.
-- Base preparada para mantenimiento, evolución y escalabilidad.
-- Documentación orientada tanto al desarrollo como al despliegue.
-
----
-
-## 10. Autoría
-
-**Diseño y desarrollo:** Aleixo Fdez Cuevas
-
+- Diseño y desarrollo: [aleixofdezcuevas.es](https://aleixofdezcuevas.es/)

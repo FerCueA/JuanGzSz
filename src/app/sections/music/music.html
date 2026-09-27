@@ -1,0 +1,28 @@
+@if (tracks.length) {
+  <app-section id="musica" appReveal>
+    <div class="space-y-8">
+      <div class="space-y-5">
+        <p class="text-xs uppercase tracking-[0.4em] text-clay">Escucha</p>
+        <h2 class="text-4xl font-semibold text-ink md:text-5xl">Música</h2>
+      </div>
+
+      <ul class="grid gap-4 sm:grid-cols-2">
+        @for (track of tracks; track track.url) {
+          <li>
+            <a
+              [href]="track.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between gap-4 border border-border bg-surface px-6 py-5 transition hover:border-ember"
+            >
+              <span class="text-base font-semibold text-ink">{{ track.title }}</span>
+              <span class="text-xs uppercase tracking-[0.25em] text-clay">{{
+                track.platform
+              }}</span>
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </app-section>
+}

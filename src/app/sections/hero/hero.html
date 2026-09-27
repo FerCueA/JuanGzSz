@@ -1,0 +1,55 @@
+<app-section id="inicio">
+  <div class="grid gap-12 pt-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+    <div class="space-y-8 pt-4">
+      <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-clay">
+        <span>Tenerife</span>
+        <span>Late set</span>
+        <span>Jazz y blues</span>
+      </div>
+
+      <div class="space-y-5">
+        <p class="text-xs uppercase tracking-[0.42em] text-clay">
+          Juan González · guitarra eléctrica y acústica
+        </p>
+        <h1
+          class="max-w-3xl text-5xl font-semibold leading-[0.86] text-ink md:text-6xl lg:text-7xl"
+        >
+          Directo con alma de club,
+          <span class="block text-ember">jazz y blues</span>
+          <span class="block text-steel">en clave de cartel.</span>
+        </h1>
+        <p class="max-w-xl text-base leading-8 text-muted md:text-lg">
+          Un formato elegante y cálido para salas, eventos y sesiones en Tenerife: guitarra con
+          presencia, repertorio con gusto y una estética que recuerda a los viejos pósteres de jazz.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a appButton href="#contacto">Reservar actuación</a>
+        <a appButton href="#sobre-mi" variant="secondary">Ver repertorio</a>
+      </div>
+
+      <div class="grid gap-4 pt-2 text-sm text-muted sm:grid-cols-3">
+        <div>
+          <span class="mb-2 block h-1 w-12 bg-ember"></span>
+          <p class="font-semibold text-ink">Directo</p>
+          <p>Set elegante y cercano</p>
+        </div>
+        <div>
+          <span class="mb-2 block h-1 w-12 bg-steel-deep"></span>
+          <p class="font-semibold text-ink">Sesión</p>
+          <p>Arreglos con espacio y tono</p>
+        </div>
+        <div>
+          <span class="mb-2 block h-1 w-12 bg-amber"></span>
+          <p class="font-semibold text-ink">Booking</p>
+          <p>WhatsApp directo</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-xl">
+      <app-poster-card />
+    </div>
+  </div>
+</app-section>

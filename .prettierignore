@@ -1,0 +1,15 @@
+# Build output and generated files
+dist/
+out-tsc/
+.angular/
+coverage/
+__screenshots__/
+
+# Dependencies
+node_modules/
+
+# Lockfile (generated)
+package-lock.json
+
+# Playwright MCP artifacts
+.playwright-mcp/

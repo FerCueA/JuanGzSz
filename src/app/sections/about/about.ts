@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Reveal } from '../../shared/directives/reveal';
+import { Section } from '../../shared/ui/section/section';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [Section, Reveal],
   templateUrl: './about.html',
-  styleUrl: './about.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class About {}

@@ -1,59 +1,145 @@
-/* You can add global styles to this file, and also import other style files */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+/* Global styles and design tokens for the Juan González landing page. */
 @import 'tailwindcss';
 
-:root {
-  color-scheme: light;
+/*
+ * Design tokens (Tailwind CSS v4 `@theme`).
+ * Every token below is exposed both as a CSS custom property and as a Tailwind
+ * utility (e.g. `--color-ember` -> `bg-ember`, `text-ember`, `border-ember`).
+ * Prefer these tokens over hardcoded hex values. See DESIGN.md.
+ */
+@theme {
+  /* Typography */
+  --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', ui-serif, Georgia, serif;
+
+  /* Ink (text) */
+  --color-ink: #2b3742;
+  --color-muted: #556474;
+  --color-steel: #46565f;
+  --color-steel-deep: #38484f;
+
+  /* Accents */
+  --color-ember: #df5a24;
+  --color-ember-strong: #c94f1e;
+  --color-ember-deep: #a83f14;
+  --color-amber: #e49b4a;
+  --color-clay: #7d5e46;
+  --color-mist: #9fb3c8;
+
+  /* Surfaces */
+  --color-paper: #f7f0e2;
+  --color-paper-deep: #f3ead8;
+  --color-paper-soft: #efe6d5;
+  --color-surface: #f5ead7;
+  --color-cream: #f8f1e3;
+  --color-sand: #baa88f;
+  --color-border: #d8cbbb;
+
+  /* Status (reserved for forms, alerts and feedback states) */
+  --color-success: #3f7d5a;
+  --color-warning: #c98a1e;
+  --color-error: #b23b2e;
+  --color-info: #4a6f8a;
+
+  /* Radius */
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-ember: 0 12px 24px rgba(217, 77, 28, 0.18);
+  --shadow-ember-sm: 0 8px 20px rgba(217, 77, 28, 0.18);
+  --shadow-poster: 0 24px 50px rgba(83, 66, 47, 0.18);
+
+  /* Motion */
+  --ease-poster: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    background:
+      radial-gradient(circle at 10% 14%, rgba(80, 102, 110, 0.1), transparent 0, transparent 22%),
+      radial-gradient(circle at 86% 12%, rgba(228, 155, 74, 0.15), transparent 0, transparent 22%),
+      linear-gradient(135deg, var(--color-paper) 0%, var(--color-paper-deep) 45%, #f7f1e6 100%);
+    color: var(--color-ink);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(44, 55, 61, 0.015) 0px,
+      rgba(44, 55, 61, 0.015) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    opacity: 0.4;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 120px rgba(92, 74, 54, 0.04);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: rgba(159, 179, 200, 0.35);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ember);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
 }
 
-body {
-  min-height: 100vh;
-  font-family: 'Source Sans 3', sans-serif;
-  background:
-    radial-gradient(circle at 10% 14%, rgba(80, 102, 110, 0.10), transparent 0, transparent 22%),
-    radial-gradient(circle at 86% 12%, rgba(228, 155, 74, 0.15), transparent 0, transparent 22%),
-    linear-gradient(135deg, #f7f0e2 0%, #f3ead8 45%, #f7f1e6 100%);
-  color: #25323d;
-}
+/*
+ * Reveal on scroll. Only active when JavaScript adds `.js` to <html>, so the
+ * content stays visible without JS. Respects `prefers-reduced-motion`.
+ */
+@layer utilities {
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s var(--ease-poster),
+      transform 0.7s var(--ease-poster);
+    will-change: opacity, transform;
+  }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: repeating-linear-gradient(
-    0deg,
-    rgba(44, 55, 61, 0.015) 0px,
-    rgba(44, 55, 61, 0.015) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  opacity: 0.4;
-}
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  box-shadow: inset 0 0 120px rgba(92, 74, 54, 0.04);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
-}
-
-::selection {
-  background: rgba(159, 179, 200, 0.35);
-  color: #243242;
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 }

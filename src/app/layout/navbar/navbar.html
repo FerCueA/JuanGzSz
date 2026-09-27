@@ -1,0 +1,72 @@
+<header class="px-4 py-4 md:px-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="flex items-center justify-between gap-4">
+      <a href="#inicio" class="space-y-1">
+        <span class="block text-sm font-semibold uppercase tracking-[0.36em] text-ink"
+          >Juan González</span
+        >
+        <span class="block text-[10px] uppercase tracking-[0.36em] text-clay"
+          >Jazz y blues · Tenerife</span
+        >
+      </a>
+
+      <button
+        type="button"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-pill text-ink transition hover:bg-white/60 md:hidden"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="nav-principal"
+        (click)="toggleMenu()"
+      >
+        <span class="sr-only">{{ menuOpen() ? 'Cerrar menú' : 'Abrir menú' }}</span>
+        <svg
+          class="h-5 w-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          @if (menuOpen()) {
+            <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+          } @else {
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          }
+        </svg>
+      </button>
+
+      <nav
+        id="nav-principal"
+        class="hidden flex-wrap items-center gap-4 text-[11px] uppercase tracking-[0.30em] text-steel md:flex"
+        aria-label="Navegación principal"
+      >
+        <ng-container [ngTemplateOutlet]="navLinksTpl" />
+      </nav>
+    </div>
+
+    @if (menuOpen()) {
+      <nav
+        class="mt-4 flex flex-col gap-3 border-t border-border pt-4 text-[11px] uppercase tracking-[0.30em] text-steel md:hidden"
+        aria-label="Navegación móvil"
+      >
+        <ng-container [ngTemplateOutlet]="navLinksTpl" />
+      </nav>
+    }
+  </div>
+</header>
+
+<ng-template #navLinksTpl>
+  @for (link of navLinks; track link.fragment) {
+    <a
+      [href]="link.fragment"
+      class="transition hover:text-ember-strong"
+      [class.text-ember-strong]="isActive(link.fragment)"
+      [attr.aria-current]="isActive(link.fragment) ? 'true' : null"
+      (click)="closeMenu()"
+    >
+      {{ link.label }}
+    </a>
+  }
+  <span class="w-fit rounded-pill bg-ember-strong px-3 py-2 text-white shadow-ember-sm"
+    >Booking open</span
+  >
+</ng-template>

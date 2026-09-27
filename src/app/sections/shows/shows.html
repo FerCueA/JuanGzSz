@@ -1,0 +1,35 @@
+<app-section id="directos" appReveal>
+  <div class="space-y-8">
+    <div class="space-y-5">
+      <p class="text-xs uppercase tracking-[0.4em] text-clay">Próximos directos</p>
+      <h2 class="text-4xl font-semibold text-ink md:text-5xl">Agenda</h2>
+    </div>
+
+    @if (shows.length) {
+      <ul class="divide-y divide-border border-y border-border">
+        @for (show of shows; track show.date + show.venue) {
+          <li class="flex flex-wrap items-baseline gap-x-6 gap-y-1 py-5">
+            <span class="w-24 text-xs uppercase tracking-[0.3em] text-clay">{{ show.date }}</span>
+            <span class="text-lg font-semibold text-ink">{{ show.venue }}</span>
+            <span class="text-sm text-muted">{{ show.city }}</span>
+            @if (show.url; as url) {
+              <a
+                [href]="url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ml-auto text-xs font-semibold uppercase tracking-[0.25em] text-ember-strong underline decoration-mist underline-offset-4 transition hover:text-ember-deep"
+              >
+                Entradas
+              </a>
+            }
+          </li>
+        }
+      </ul>
+    } @else {
+      <p class="max-w-2xl text-sm leading-7 text-muted">
+        No hay fechas publicadas ahora mismo. Escríbeme y buscamos la mejor fecha para tu sala o
+        evento.
+      </p>
+    }
+  </div>
+</app-section>

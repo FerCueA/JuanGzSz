@@ -1,0 +1,23 @@
+@if (images.length) {
+  <app-section id="galeria" appReveal>
+    <div class="space-y-8">
+      <div class="space-y-5">
+        <p class="text-xs uppercase tracking-[0.4em] text-clay">Galería</p>
+        <h2 class="text-4xl font-semibold text-ink md:text-5xl">Directo en imágenes</h2>
+      </div>
+
+      <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        @for (image of images; track image.src) {
+          <li class="overflow-hidden border border-border bg-surface">
+            <img
+              [src]="image.src"
+              [alt]="image.alt"
+              loading="lazy"
+              class="aspect-[4/5] w-full object-cover grayscale contrast-125 sepia-[0.25] transition duration-500 hover:grayscale-0"
+            />
+          </li>
+        }
+      </ul>
+    </div>
+  </app-section>
+}

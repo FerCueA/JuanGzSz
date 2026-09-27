@@ -1,14 +1,17 @@
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
+/**
+ * Decorative jazz poster used as the hero's visual anchor. Falls back to a pure
+ * CSS illustration when the photograph cannot be loaded.
+ */
 @Component({
-  selector: 'app-hero',
+  selector: 'app-poster-card',
   imports: [NgOptimizedImage],
-  templateUrl: './hero.html',
-  styleUrl: './hero.css',
+  templateUrl: './poster-card.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Hero {
+export class PosterCard {
   protected readonly photoAvailable = signal(true);
 
   protected usePosterFallback(): void {

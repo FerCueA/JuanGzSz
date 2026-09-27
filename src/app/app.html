@@ -1,17 +1,35 @@
-<div class="relative min-h-screen overflow-x-hidden bg-[#f7f0e2] text-slate-800">
+<a
+  href="#contenido"
+  class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-pill focus:bg-ember focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+>
+  Saltar al contenido
+</a>
+
+<div class="relative min-h-screen overflow-x-hidden bg-paper text-ink">
   <div class="pointer-events-none absolute inset-0 overflow-hidden">
-    <div class="absolute inset-x-0 top-0 h-96 bg-linear-to-b from-[#efe6d5]/70 to-transparent"></div>
-    <div class="absolute -left-12 top-12 h-80 w-56 rotate-12 bg-[#38484f]/12"></div>
-    <div class="absolute right-0 top-0 h-128 w-40 bg-[#df5a24]/10"></div>
-    <div class="absolute left-1/2 top-20 h-176 w-px -translate-x-1/2 bg-linear-to-b from-transparent via-[#baa88f]/16 to-transparent"></div>
-    <div class="absolute left-4 top-120 h-32 w-80 -rotate-12 bg-[#e49b4a]/10"></div>
-    <div class="absolute bottom-10 right-6 h-64 w-64 rounded-full bg-[#d94d1c]/8 blur-3xl"></div>
+    <div
+      class="absolute inset-x-0 top-0 h-96 bg-linear-to-b from-paper-soft/70 to-transparent"
+    ></div>
+    <div class="absolute -left-12 top-12 h-80 w-56 rotate-12 bg-steel-deep/12"></div>
+    <div class="absolute right-0 top-0 h-128 w-40 bg-ember/10"></div>
+    <div
+      class="absolute left-1/2 top-20 h-176 w-px -translate-x-1/2 bg-linear-to-b from-transparent via-sand/16 to-transparent"
+    ></div>
+    <div class="absolute left-4 top-120 h-32 w-80 -rotate-12 bg-amber/10"></div>
+    <div class="absolute bottom-10 right-6 h-64 w-64 rounded-full bg-ember-strong/8 blur-3xl"></div>
   </div>
 
   <div class="relative z-10">
     <app-navbar />
-    <app-hero />
-    <app-about />
+    <main id="contenido">
+      <app-hero />
+      <app-about />
+      <app-shows />
+      <app-music />
+      <app-gallery />
+      <app-booking />
+      <app-faq />
+    </main>
     <app-footer />
   </div>
 </div>

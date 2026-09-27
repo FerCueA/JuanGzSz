@@ -1,0 +1,54 @@
+<div class="relative mx-auto h-160 max-w-md bg-surface shadow-poster">
+  <div class="absolute left-6 top-[-10px] h-5 w-5 rounded-sm bg-steel-deep shadow"></div>
+  <div class="absolute right-6 top-[-10px] h-5 w-5 rounded-sm bg-steel-deep shadow"></div>
+
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute left-0 top-0 h-full w-24 bg-steel-deep"></div>
+    <div class="absolute right-0 top-0 h-full w-24 bg-ember"></div>
+    <div class="absolute left-20 top-16 h-56 w-56 rounded-full bg-ember"></div>
+    <div class="absolute right-8 top-0 h-56 w-56 rounded-full border-[22px] border-amber"></div>
+    <div class="absolute left-28 top-0 h-full w-8 rotate-12 bg-cream/90"></div>
+    <div class="absolute -left-10 bottom-16 h-64 w-64 rotate-12 bg-amber/80"></div>
+    <div class="absolute bottom-0 left-28 h-28 w-20 bg-ember"></div>
+  </div>
+
+  <div
+    class="absolute left-6 top-4 z-20 text-6xl font-semibold uppercase tracking-[0.05em] text-ember md:text-7xl"
+  >
+    JAZZ
+  </div>
+
+  @if (photoAvailable()) {
+    <img
+      ngSrc="/juan-gonzalez-guitar.jpg"
+      alt="Juan González posando con su guitarra eléctrica"
+      width="760"
+      height="900"
+      priority
+      class="absolute bottom-0 left-10 right-10 z-10 h-[74%] w-auto max-w-none object-cover grayscale contrast-125 sepia-[0.25] mix-blend-multiply"
+      (error)="usePosterFallback()"
+    />
+  } @else {
+    <div class="absolute inset-x-14 bottom-0 top-28 z-10">
+      <div class="absolute bottom-0 left-2 h-[70%] w-24 bg-black"></div>
+      <div class="absolute bottom-0 left-10 h-[78%] w-14 -skew-x-12 bg-steel-deep"></div>
+      <div class="absolute left-6 top-10 h-20 w-20 rounded-full bg-steel-deep"></div>
+      <div class="absolute left-12 top-18 h-4 w-20 -rotate-12 bg-black"></div>
+
+      <div class="absolute bottom-0 right-2 h-[74%] w-24 bg-steel-deep"></div>
+      <div class="absolute bottom-0 right-12 h-[72%] w-12 -skew-x-12 bg-black"></div>
+      <div class="absolute right-8 top-12 h-20 w-20 rounded-full bg-steel-deep"></div>
+      <div class="absolute right-12 top-18 h-28 w-10 rounded-full bg-paper"></div>
+    </div>
+  }
+
+  <div
+    class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-44 bg-linear-to-t from-ink/80 via-ink/40 to-transparent"
+    aria-hidden="true"
+  ></div>
+
+  <div class="absolute bottom-5 left-6 right-6 z-30 text-cream">
+    <p class="text-[10px] uppercase tracking-[0.35em] text-cream/80">Juan González · Tenerife</p>
+    <p class="mt-1 text-sm uppercase tracking-[0.25em] text-amber">jazz y blues / live sessions</p>
+  </div>
+</div>

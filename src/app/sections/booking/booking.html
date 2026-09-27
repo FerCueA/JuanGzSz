@@ -1,0 +1,96 @@
+<app-section id="contacto" appReveal>
+  <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div class="space-y-5">
+      <p class="text-xs uppercase tracking-[0.4em] text-clay">Booking</p>
+      <h2 class="text-4xl font-semibold text-ink md:text-5xl">
+        Lleva este directo a tu sala, evento o proyecto.
+      </h2>
+      <p class="max-w-md text-base leading-8 text-muted">
+        Cuéntame la fecha, el lugar y el tipo de evento. Te contesto con disponibilidad y opciones
+        de formato.
+      </p>
+    </div>
+
+    <form class="space-y-5" [formGroup]="form" (ngSubmit)="submit($event)" novalidate>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div class="space-y-2">
+          <label for="booking-name" class="block text-xs uppercase tracking-[0.25em] text-clay">
+            Nombre
+          </label>
+          <input
+            id="booking-name"
+            type="text"
+            formControlName="name"
+            autocomplete="name"
+            class="w-full rounded-sm border border-border bg-white/75 px-4 py-3 text-sm text-ink transition placeholder:text-muted focus:border-ember focus:bg-white"
+            [class.border-error]="showError('name')"
+            [attr.aria-invalid]="showError('name') || null"
+            [attr.aria-describedby]="showError('name') ? 'booking-name-error' : null"
+          />
+          @if (showError('name')) {
+            <p id="booking-name-error" class="text-xs text-error">Escribe tu nombre.</p>
+          }
+        </div>
+
+        <div class="space-y-2">
+          <label for="booking-type" class="block text-xs uppercase tracking-[0.25em] text-clay">
+            Tipo de evento
+          </label>
+          <select
+            id="booking-type"
+            formControlName="eventType"
+            class="w-full rounded-sm border border-border bg-white/75 px-4 py-3 text-sm text-ink transition focus:border-ember focus:bg-white"
+            [class.border-error]="showError('eventType')"
+            [attr.aria-invalid]="showError('eventType') || null"
+            [attr.aria-describedby]="showError('eventType') ? 'booking-type-error' : null"
+          >
+            <option value="" disabled>Selecciona una opción</option>
+            @for (type of eventTypes; track type) {
+              <option [value]="type">{{ type }}</option>
+            }
+          </select>
+          @if (showError('eventType')) {
+            <p id="booking-type-error" class="text-xs text-error">Elige el tipo de evento.</p>
+          }
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <label for="booking-date" class="block text-xs uppercase tracking-[0.25em] text-clay">
+          Fecha aproximada <span class="text-muted">(opcional)</span>
+        </label>
+        <input
+          id="booking-date"
+          type="date"
+          formControlName="date"
+          class="w-full rounded-sm border border-border bg-white/75 px-4 py-3 text-sm text-ink transition focus:border-ember focus:bg-white"
+        />
+      </div>
+
+      <div class="space-y-2">
+        <label for="booking-message" class="block text-xs uppercase tracking-[0.25em] text-clay">
+          Mensaje <span class="text-muted">(opcional)</span>
+        </label>
+        <textarea
+          id="booking-message"
+          rows="4"
+          formControlName="message"
+          class="w-full rounded-sm border border-border bg-white/75 px-4 py-3 text-sm text-ink transition placeholder:text-muted focus:border-ember focus:bg-white"
+        ></textarea>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <a
+          appButton
+          [href]="whatsappLink()"
+          target="_blank"
+          rel="noopener noreferrer"
+          (click)="submit($event)"
+        >
+          Enviar por WhatsApp
+        </a>
+        <p class="text-xs text-muted">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+      </div>
+    </form>
+  </div>
+</app-section>
